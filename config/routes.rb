@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :homeworks
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,7 +14,11 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :courses
-    resources :teachers
+    resources :teachers do
+      get :community, on: :collection #esta parte me sirve para crear una vista igual al listado de profesores 
+    end
+    resources :homeworks
+    resources :students
 
   # Example resource route with options:
   #   resources :products do

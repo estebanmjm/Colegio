@@ -14,6 +14,11 @@ class TeachersController < ApplicationController
 		#puts teacher_params
 	end
 
+	def community #esto me sirve para agregar una vista igual a la lista de profesores sin que se pueda editar (le borro la parte de editar y eliminar y de resto la copio igual) (ver codigo en el archivo routes en la parte resources)
+		@teacher = Teacher.all
+		
+	end
+
 	def show
 		@teacher = Teacher.find(params[:id])
 		

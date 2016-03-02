@@ -1,31 +1,34 @@
-<h1>Agregar profesor</h1>
+<h1>Actualizar Estudiante</h1>
 
-<%= form_for @teacher do |f| %>
+<%= form_for @student do |f| %>
+<%= link_to "ver todos", students_path %>
 
-  <p>
+<p>
     <%= f.label :name, "Nombre" %><br>
     <%= f.text_area :name %>
-  </p>
+</p>
 
-  <p>
+ <p>
     <%= f.label :lastname, "Apellido" %><br>
     <%= f.text_area :lastname %>
-  </p>
-  <p>
+</p>
+
+<p>
     <%= f.label :document, "Documento de identidad" %><br>
     <%= f.text_area :document %>
-  </p>
-  <p>
-    <%= f.label :course, "Asignatura" %><br>
-    <%= f.text_area :course %>
-  </p>
-  <p>
-    <%= f.label :email, "Correo electronico" %><br>
-    <%= f.text_area :email %>
-  </p>
+</p>
 
-  
-  <p>
+<p>
+    <%= f.label :course, "Asignatura que cursa" %><br>
+    <%= f.text_area :course %>
+</p>
+
+<p>
+    <%= f.label :email, "correo electronico" %><br>
+    <%= f.text_area :email %>
+</p>
+
+<p>
     <%= f.submit %>
-  </p>
+</p>
 <% end %>
