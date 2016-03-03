@@ -1,4 +1,4 @@
 class Teacher < ActiveRecord::Base
-	has many :courses
-	
+	has_and_belongs_to_many :courses
+	has_many :homeworks
 end
